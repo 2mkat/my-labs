@@ -45,6 +45,14 @@ class complex {
         friend complex& operator+= (complex&, const complex&);
         friend complex& operator-= (complex&, const complex&);
         friend complex& operator*= (complex&, const complex&);
+    
+        bool operator != (Complex &c){
+             return (re == c.re && im == c.im) ? false : true;
+        }
+    
+         bool operator == (Complex &c){
+            return (re == c.re && im == c.im) ? true : false;
+        }
 };
 
 std::istream& operator>> (std::istream& in, complex& x){
